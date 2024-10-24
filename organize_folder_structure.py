@@ -85,8 +85,8 @@ def CropBackground(image, label):
     import scipy
     centroid = scipy.ndimage.measurements.center_of_mass(image_mask)
 
-    x_centroid = np.int(centroid[0])
-    y_centroid = np.int(centroid[1])
+    x_centroid = int(centroid[0])
+    y_centroid = int(centroid[1])
 
     roiFilter.SetIndex([int(x_centroid - (size_new[0]) / 2), int(y_centroid - (size_new[1]) / 2), 0])
 
